@@ -1,0 +1,40 @@
+.btn-hov {
+  transition: all 0.25s;
+}
+
+.btn-hov:hover {
+  -webkit-transform: scale(1.1);
+  -moz-transform: scale(1.1);
+  -ms-transform: scale(1.1);
+  -o-transform: scale(1.1);
+  transform: scale(1.1);
+}
+
+.my-visible {
+  transition: all 0.5s;
+  opacity: 1;
+}
+
+.my-hidden {
+  opacity: 0.2;
+}
+
+.my-element.enter {
+  transition: all 0.5s;
+}
+.my-element.enter-active {
+  opacity: 1;
+}
+.my-element.enter-done {
+  opacity: 1;
+}
+
+.my-element.exit {
+  transition: all 1.5s;
+}
+.my-element.exit-active {
+  opacity: 0;
+}
+.my-element.exit-done {
+  opacity: 0;
+}
