@@ -38,3 +38,19 @@
 .my-element.exit-done {
   opacity: 0;
 }
+
+.my-list-item {
+  transition: all 0.3s;
+}
+.my-list-item.enter-active {
+  background-color: var(--bs-list-group-active-bg);
+}
+.my-list-item.enter-done {
+  background-color: var(--bs-list-group-active-bg);
+}
+.my-list-item.exit-active {
+  background-color: transparent;
+}
+.my-list-item.exit-done {
+  background-color: transparent;
+}

@@ -1,4 +1,5 @@
 import { MouseEvent, useState } from "react";
+import { CSSTransition } from "react-transition-group";
 
 interface Props {
   heading: string;
@@ -19,17 +20,17 @@ function ListGroup({ items, heading }: Props) {
       {items.length === 0 && <p>No items found</p>}
       <ul className="list-group">
         {items.map((item, index) => (
-          <li
-            className={
-              selectedIndex === index
-                ? "list-group-item active"
-                : "list-group-item"
-            }
-            key={item}
-            onClick={(e) => handleClick(item, index, e)}
-          >
-            {item}
-          </li>
+          <>
+            <CSSTransition
+              in={selectedIndex === index}
+              timeout={300}
+              className="list-group-item my-list-item"
+            >
+              <li key={item} onClick={(e) => handleClick(item, index, e)}>
+                {item}
+              </li>
+            </CSSTransition>
+          </>
         ))}
       </ul>
     </>
