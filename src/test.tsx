@@ -1,11 +1,11 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
-import App from "./pages/App.tsx";
-import TestMUI from "./pages/TestMUI.tsx";
-import "./styles.css";
+import App from "./App.tsx";
+import "./App.css";
+import Button from "./components/Button.tsx";
 
 ReactDOM.createRoot(document.getElementById("root")!).render(
   <React.StrictMode>
-    <TestMUI />
+    <Button>Heeyeea!!!</Button>
   </React.StrictMode>
 );
