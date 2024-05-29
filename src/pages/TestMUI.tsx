@@ -4,7 +4,7 @@ import ButtonGroup from "@mui/material/ButtonGroup";
 import Box from "@mui/material/Box";
 import Paper from "@mui/material/Paper";
 import Grid from "@mui/material/Grid";
-import { Card, Typography } from "@mui/material";
+import { Card, Container, Divider, Typography } from "@mui/material";
 import CardContent from "@mui/material/CardContent";
 
 const Item = styled(Paper)(({ theme }) => ({
@@ -17,7 +17,12 @@ const Item = styled(Paper)(({ theme }) => ({
 
 function TestMUI() {
   return (
-    <>
+    <Container fixed maxWidth="md">
+      <center>
+        <Typography variant="h4" sx={{ justify: "center" }}>
+          Тестовая разметка на базе Material UI
+        </Typography>
+      </center>
       <Box
         sx={{
           display: "flex",
@@ -57,11 +62,14 @@ function TestMUI() {
 
       <br />
 
+      <Typography variant="h5" sx={{ justify: "center" }}>
+        Типа товары:
+      </Typography>
       <Grid container spacing={2}>
         {new Array(8).fill(null).map((_, i) => (
           <Grid item xs={12} md={3}>
             <Item elevation={i + 1}>
-              <Typography>Item {i + 1}</Typography>
+              <Typography>Product №{i + 1}</Typography>
               <br />
               xs=12 md=3
             </Item>
@@ -71,12 +79,13 @@ function TestMUI() {
 
       <br />
 
-      <Card elevation={5}>
+      <Card elevation={5} sx={{ width: 275 }}>
         <CardContent>
           <Typography variant="h5">Card here</Typography>
+          <Divider flexItem />
         </CardContent>
       </Card>
-    </>
+    </Container>
   );
 }
 
