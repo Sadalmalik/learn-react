@@ -63,3 +63,23 @@ render.com - деплой бэкэнда
 https://medium.com/@eyalgershon/sending-a-webhook-for-new-or-updated-rows-in-google-sheets-e0c9d6a8cb45
 
 
+
+
+------------------------------------------------------------
+
+
+
+Тестовая гугл таблица для проверки:
+
+Страница Settings:
+https://docs.google.com/spreadsheets/d/e/2PACX-1vSxm8NuQzmcx1VnbQjCRBwGpePaZf57WZJ8UvkwP9fQdT4ua9VeWbl8tu0voR_L4WV2Etkj7jAlc-VW/pub?gid=0&single=true&output=csv
+
+Страница Products:
+https://docs.google.com/spreadsheets/d/e/2PACX-1vSxm8NuQzmcx1VnbQjCRBwGpePaZf57WZJ8UvkwP9fQdT4ua9VeWbl8tu0voR_L4WV2Etkj7jAlc-VW/pub?gid=1431473448&single=true&output=csv
+
+Файл таблицы: 2PACX-1vSxm8NuQzmcx1VnbQjCRBwGpePaZf57WZJ8UvkwP9fQdT4ua9VeWbl8tu0voR_L4WV2Etkj7jAlc-VW
+Страница Settings: 0
+Страница Products: 1431473448
+
+
+
