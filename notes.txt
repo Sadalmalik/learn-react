@@ -83,3 +83,88 @@ https://docs.google.com/spreadsheets/d/e/2PACX-1vSxm8NuQzmcx1VnbQjCRBwGpePaZf57W
 
 
 
+
+
+
+
+
+
+
+
+
+            <FormControl sx={{ m: 2, width: 245 }}>
+              <InputLabel>Categories</InputLabel>
+              <Select
+                labelId="demo-multiple-chip-label"
+                id="demo-multiple-chip"
+                multiple
+                size="small"
+                value={selectedNames}
+                onChange={handleChange}
+                input={
+                  <OutlinedInput id="select-multiple-chip" label="Categories" />
+                }
+                renderValue={(selected) => (
+                  <Box sx={{ display: "flex", flexWrap: "wrap", gap: 0.5 }}>
+                    {selected.map((value) => (
+                      <Chip key={value} label={value} />
+                    ))}
+                  </Box>
+                )}
+              >
+                {names.map((name) => (
+                  <MenuItem key={name} value={name}>
+                    {name}
+                  </MenuItem>
+                ))}
+              </Select>
+            </FormControl>
+
+            <FormControl sx={{ m: 2, width: 245 }}>
+              <InputLabel>Categories</InputLabel>
+              <Select
+                multiple
+                value={selectedNames}
+                onChange={(e) => setSelectedNames(e.target.value)}
+                input={<OutlinedInput label="Categories" />}
+                size="small"
+              >
+                {names.map((name) => (
+                  <MenuItem key={name} value={name}>
+                    {name}
+                  </MenuItem>
+                ))}
+              </Select>
+            </FormControl>
+
+            <FormControl sx={{ m: 2, width: 245 }}>
+              <InputLabel>Categories</InputLabel>
+              <Select
+                labelId="demo-multiple-chip-label"
+                id="demo-multiple-chip"
+                multiple
+                size="small"
+                value={selectedNames}
+                onChange={handleChange}
+                input={
+                  <OutlinedInput id="select-multiple-chip" label="Categories" />
+                }
+                renderValue={(selected) => (
+                  <Box sx={{ display: "flex", flexWrap: "wrap", gap: 0.5 }}>
+                    {selected.map((value) => (
+                      <Chip key={value} label={value} />
+                    ))}
+                  </Box>
+                )}
+              >
+                {names.map((name) => (
+                  <MenuItem key={name} value={name}>
+                    {name}
+                  </MenuItem>
+                ))}
+              </Select>
+            </FormControl>
+
+
+
+            

@@ -16,8 +16,9 @@ const Item = styled(Paper)(({ theme }) => ({
 }));
 
 function TestMUI() {
+  let cards = ["first", "second", "third", "etc."];
   return (
-    <Container fixed maxWidth="md">
+    <Container fixed maxWidth="lg">
       <center>
         <Typography variant="h4" sx={{ justify: "center" }}>
           Тестовая разметка на базе Material UI
@@ -52,11 +53,19 @@ function TestMUI() {
         <Grid item xs={6} md={4}>
           <Item>xs=6 md=4</Item>
         </Grid>
+
         <Grid item xs={6} md={4}>
           <Item>xs=6 md=4</Item>
         </Grid>
         <Grid item xs={6} md={8}>
           <Item>xs=6 md=8</Item>
+        </Grid>
+
+        <Grid item xs={6} md={3}>
+          <Item>xs=6 md=8</Item>
+        </Grid>
+        <Grid item xs={6} md={9}>
+          <Item>xs=6 md=4</Item>
         </Grid>
       </Grid>
 
@@ -75,8 +84,24 @@ function TestMUI() {
             </Item>
           </Grid>
         ))}
+        <Grid item xs={3} md={3}>
+          <Paper>Test 1</Paper>
+        </Grid>
+        <Grid item xs={3} md={9}>
+          {cards.map((item, index) => (
+            <Card elevation={5} sx={{ width: 275 }}>
+              <CardContent>
+                <Typography variant="h5">Card {index}</Typography>
+                <Divider flexItem />
+                <Typography>{item}</Typography>
+              </CardContent>
+            </Card>
+          ))}
+        </Grid>
       </Grid>
 
+      <br />
+      <Paper>Test 3</Paper>
       <br />
 
       <Card elevation={5} sx={{ width: 275 }}>
