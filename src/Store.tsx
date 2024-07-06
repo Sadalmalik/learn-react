@@ -93,6 +93,7 @@ function Store() {
               values={names}
               stateKey="mike"
             ></MultiSelect>
+            <MultiSelect label="Tags" chip={true} values={names}></MultiSelect>
           </Box>
         </Paper>
       </Grid>

@@ -1,4 +1,4 @@
-import { Dispatch, SetStateAction } from "react";
+import { Dispatch, SetStateAction, useEffect, useState } from "react";
 
 const STORAGE_KEY = "site-state";
 
@@ -30,19 +30,21 @@ function UseGlobalState<S>(
   initialValue: any = null,
   forceSave: boolean = true
 ): [S, Dispatch<SetStateAction<S>>] {
-  let state = initialValue;
-  if (key in globalState) {
-    state = globalState[key];
-  } else {
-    globalState[key] = state;
-  }
+  const [state, setState] = useState(() => {
+    if (key in globalState) {
+      return globalState[key];
+    } else {
+      return (globalState[key] = initialValue);
+    }
+  });
 
   return [
     state,
     (value: any) => {
       try {
-        globalState[key] = state = value;
+        globalState[key] = value;
         if (forceSave) SaveGlobalState();
+        setState(value);
       } catch (error) {
         console.error(error);
       }
